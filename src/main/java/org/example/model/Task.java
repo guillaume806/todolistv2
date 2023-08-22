@@ -15,8 +15,8 @@ public class Task {
     private boolean completed;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "object_id",referencedColumnName = "id_object")
-    private Object object;
+    @JoinColumn(name = "info_id",referencedColumnName = "id_info")
+    private Info info;
 
     public Task() {
     }

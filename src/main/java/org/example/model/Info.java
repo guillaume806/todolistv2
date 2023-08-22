@@ -1,5 +1,6 @@
 package org.example.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -7,10 +8,11 @@ import java.util.Date;
 
 
 @Entity
-public class Object {
+public class Info {
 
     @Id
     @GeneratedValue
+    @Column(name = "id_info")
     private long id;
 
     private String description;
@@ -19,10 +21,10 @@ public class Object {
 
     private int Priority;
 
-    public Object() {
+    public Info() {
     }
 
-    public Object(long id, String description, Date finalDate, int priority) {
+    public Info(long id, String description, Date finalDate, int priority) {
         this.id = id;
         this.description = description;
         this.finalDate = finalDate;
