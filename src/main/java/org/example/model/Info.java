@@ -51,7 +51,7 @@ public class Info {
         return finalDate;
     }
 
-    public void setFinalDate(Date finalDate) {
+    public void setFinalDate(String finalDate) {
         this.finalDate = finalDate;
     }
 

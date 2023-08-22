@@ -6,6 +6,8 @@ import org.example.model.Task;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import java.util.Date;
+import java.util.Scanner;
 
 public class InfoListAppConsole {
 
@@ -16,16 +18,26 @@ public class InfoListAppConsole {
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
 
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Entrer la description de la tâche : ");
+        String description = scanner.nextLine();
         Info info = new Info();
-        info.setDescription();
-        info.setFinalDate();
+        info.setDescription(description);
+
+        System.out.println("Entrer la date de fin de la tache : ");
+        String date = scanner.nextLine();
+        info.setFinalDate(date);
+
+        System.out.println("Entrer la date de fin de la tache : ");
         info.setPriority();
 
 
 
         Task task = new Task();
 
-        task.setTitle(432);
+        task.setTitle();
         task.setCompleted();
         em.persist(task);
 
