@@ -14,6 +14,10 @@ public class Task {
     private String title;
     private boolean completed;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "object_id",referencedColumnName = "id_object")
+    private Object object;
+
     public Task() {
     }
 
